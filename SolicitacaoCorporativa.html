@@ -2,17 +2,46 @@
 
 <head>
 
-
     <link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide-flat.min.css"/>
-
 
     <script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
 
-
     <script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
 
-
     <script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js"></script>
+
+
+    <style>
+
+        .form-group {
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .tab-pane {
+
+            padding: 20px;
+
+        }
+
+
+        .nav-tabs {
+
+            margin-bottom: 15px;
+
+        }
+
+
+        label {
+
+            margin-bottom: 8px;
+
+        }
+
+
+    </style>
 
 
 </head>
@@ -22,416 +51,428 @@
 <body>
 
 
-    <div class="fluig-style-guide">
+<div class="fluig-style-guide">
 
 
-        <form name="form" role="form">
+<form name="form" role="form">
 
 
 
-            <ul class="nav nav-tabs">
+<ul class="nav nav-tabs" role="tablist">
 
 
-                <li class="active">
+<li class="active">
 
+<a href="#dados" data-toggle="tab">
 
-                    <a href="#dados" data-toggle="tab">
+Dados da Solicitação
 
-                        Dados da Solicitação
+</a>
 
-                    </a>
+</li>
 
 
-                </li>
 
+<li>
 
+<a href="#aprovacao" data-toggle="tab">
 
-                <li>
+Aprovação
 
+</a>
 
-                    <a href="#aprovacao" data-toggle="tab">
+</li>
 
-                        Aprovação
 
-                    </a>
 
+<li>
 
-                </li>
+<a href="#observacoes" data-toggle="tab">
 
+Observações
 
+</a>
 
-                <li>
+</li>
 
 
-                    <a href="#observacoes" data-toggle="tab">
+</ul>
 
-                        Observações
 
-                    </a>
 
 
-                </li>
 
+<div class="tab-content">
 
-            </ul>
 
 
 
 
+<!-- DADOS -->
 
-            <div class="tab-content">
 
+<div class="tab-pane active" role="tabpanel" id="dados">
 
 
 
+<div class="row">
 
-                <div class="tab-pane active" id="dados">
 
+<div class="col-md-6">
 
-                    <br>
 
+<div class="form-group">
 
 
-                    <div class="form-group">
+<label for="nomeSolicitante">
 
+Nome do solicitante
 
-                        <label>
+</label>
 
-                            Nome do solicitante
 
-                        </label>
+<input 
 
+type="text"
 
+class="form-control"
 
-                        <input
+id="nomeSolicitante"
 
+name="nomeSolicitante">
 
-                            type="text"
 
+</div>
 
-                            class="form-control"
 
+</div>
 
-                            name="nomeSolicitante"
 
 
-                            id="nomeSolicitante"
 
 
-                            readonly>
+<div class="col-md-6">
 
 
-                    </div>
+<div class="form-group">
 
 
+<label for="email">
 
+E-mail
 
+</label>
 
-                    <div class="form-group">
 
+<input
 
-                        <label>
+type="email"
 
-                            Data de Solicitação
+class="form-control"
 
-                        </label>
+id="email"
 
+name="email">
 
 
-                        <input
+</div>
 
 
-                            type="date"
+</div>
 
 
-                            class="form-control"
+</div>
 
 
-                            name="dataSolicitacao"
 
 
-                            id="dataSolicitacao"
 
 
-                            readonly>
 
+<div class="row">
 
-                    </div>
 
+<div class="col-md-6">
 
 
+<div class="form-group">
 
 
+<label for="departamento">
 
-                    <div class="form-group">
+Departamento
 
+</label>
 
-                        <label>
 
-                            Tipo de solicitação
+<input
 
-                        </label>
+type="text"
 
+class="form-control"
 
+id="departamento"
 
-                        <select
+name="departamento">
 
 
-                            class="form-control"
+</div>
 
 
-                            name="tipoSolicitacao">
+</div>
 
 
 
-                            <option value="">
 
 
-                                Selecione
+<div class="col-md-6">
 
 
-                            </option>
+<div class="form-group">
 
 
+<label for="tipoSolicitacao">
 
-                            <option value="TI">
+Tipo de solicitação
 
+</label>
 
-                                TI
 
 
-                            </option>
+<select
 
+class="form-control"
 
+id="tipoSolicitacao"
 
-                            <option value="RH">
+name="tipoSolicitacao">
 
 
-                                RH
 
+<option>
 
-                            </option>
+Selecione
 
+</option>
 
 
-                            <option value="Financeiro">
+<option>
 
+Compra
 
-                                Financeiro
+</option>
 
 
-                            </option>
+<option>
 
+Manutenção
 
+</option>
 
-                        </select>
 
+<option>
 
-                    </div>
+Outro
 
+</option>
 
 
+</select>
 
 
 
-                    <div class="form-group">
+</div>
 
 
-                        <label>
+</div>
 
-                            Descrição da solicitação
 
-                        </label>
+</div>
 
 
 
-                        <textarea
+</div>
 
 
-                            class="form-control"
 
 
-                            name="descricao"
 
 
-                            rows="5"
 
+<!-- APROVAÇÃO -->
 
-                            placeholder="Descreva sua solicitação">
 
+<div class="tab-pane" role="tabpanel" id="aprovacao">
 
-                        </textarea>
 
 
-                    </div>
+<div class="row">
 
 
+<div class="col-md-6">
 
 
-                </div>
+<div class="form-group">
 
 
+<label for="aprovador">
 
+Responsável pela aprovação
 
+</label>
 
 
+<input
 
+type="text"
 
+class="form-control"
 
-                <div class="tab-pane" id="aprovacao">
+id="aprovador"
 
+name="aprovador">
 
-                    <br>
 
+</div>
 
 
-                    <div class="form-group">
+</div>
 
 
-                        <label>
 
-                            Responsável pela aprovação
 
-                        </label>
+<div class="col-md-6">
 
 
+<div class="form-group">
 
-                        <input
 
+<label for="status">
 
-                            type="text"
+Status
 
+</label>
 
-                            class="form-control"
 
+<select
 
-                            name="responsavelAprovacao">
+class="form-control"
 
+id="status"
 
+name="status">
 
-                    </div>
 
 
+<option>
 
+Pendente
 
+</option>
 
 
-                    <div class="form-group">
+<option>
 
+Aprovado
 
-                        <label>
+</option>
 
-                            Status
 
-                        </label>
+<option>
 
+Reprovado
 
+</option>
 
-                        <select
 
+</select>
 
-                            class="form-control"
 
 
-                            name="status">
+</div>
 
 
+</div>
 
-                            <option>
 
-                                Pendente
 
-                            </option>
+</div>
 
 
 
-                            <option>
+</div>
 
-                                Aprovado
 
-                            </option>
 
 
 
-                            <option>
 
-                                Reprovado
 
-                            </option>
 
 
+<!-- OBSERVAÇÕES -->
 
-                        </select>
 
+<div class="tab-pane" role="tabpanel" id="observacoes">
 
-                    </div>
 
 
+<div class="row">
 
-                </div>
 
+<div class="col-md-12">
 
 
+<div class="form-group">
 
 
+<label for="observacoes">
 
+Observações
 
+</label>
 
 
-                <div class="tab-pane" id="observacoes">
 
+<textarea
 
-                    <br>
+class="form-control"
 
+id="observacoes"
 
+name="observacoes"
 
-                    <div class="form-group">
+rows="6">
 
 
-                        <label>
+</textarea>
 
-                            Observações adicionais
 
-                        </label>
 
+</div>
 
 
-                        <textarea
+</div>
 
 
-                            class="form-control"
+</div>
 
 
-                            name="observacoes"
 
+</div>
 
-                            rows="5">
 
 
 
-                        </textarea>
 
+</div>
 
-                    </div>
 
 
+</form>
 
-                </div>
 
-
-
-
-
-            </div>
-
-
-
-        </form>
-
-
-    </div>
-
-
+</div>
 
 
 
